@@ -1,0 +1,45 @@
+.coins-box{
+    border: 3px solid green;
+    background-color: beige;
+    padding-top: 1.5rem;
+}
+
+.coins-box nav{
+    display: flex;
+    justify-content: space-around;
+}
+
+.day select{
+    margin-right: 2rem;
+}
+
+table{
+    align-items: center;
+}
+
+td, th {
+    background-color: red;
+    padding: 8px;
+}
+
+#total__coins{
+    border: transparent;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+input{
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: transparent;
+}
+
+select{
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: transparent;
+}
+
+table{
+    margin-left: 14rem;
+}
