@@ -40,6 +40,9 @@ select{
     border: transparent;
 }
 
-table{
-    margin-left: 14rem;
+.table{
+    border: 5px solid yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
