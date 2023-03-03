@@ -39,10 +39,11 @@ h1{
     input[type="password"],
     button,
     textarea {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'montserrat', sans-serif;
     font-size: 22px;
     padding: 0.25rem;
     border-radius: 0.5rem;
+    text-align: center;
     }
     
     label,

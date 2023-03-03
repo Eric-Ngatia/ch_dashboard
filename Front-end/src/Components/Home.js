@@ -1,16 +1,11 @@
 import React from 'react';
 import './Home.css';
+import Navigation from './Navigation';
 
 function Home() {
     return (
         <div className='container'>
-            <div className='card__left'>
-                <h1>DASHBOARD</h1>
-
-                <hr/>
-                <h3> <i class="fa-solid fa-wallet"></i> Versement</h3>
-            </div>
-
+            <Navigation/>
             <div className='card__right'>
                 <navbar>
                     <span>User-Name</span>

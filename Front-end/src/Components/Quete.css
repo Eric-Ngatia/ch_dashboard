@@ -1,7 +1,8 @@
 .coins-box{
     border: 3px solid green;
     background-color: beige;
-    padding-top: 1.5rem;
+    display: flex;
+    
 }
 
 .coins-box nav{
@@ -13,13 +14,16 @@
     margin-right: 2rem;
 }
 
-table{
+.table{
     align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 td, th {
-    background-color: red;
+    background-color: skyblue;
     padding: 8px;
+    text-align: center;
 }
 
 #total__coins{
@@ -34,15 +38,32 @@ input{
     border: transparent;
 }
 
+input#result{
+    background-color: green;
+    background-color: transparent;
+    outline:none;
+    border:none;
+}
+
+input#monnaie{
+    background-color: transparent;
+    outline:none;
+    border:none;
+}
+
 select{
     padding: 0.5rem;
     border-radius: 10px;
     border: transparent;
 }
 
-.table{
-    border: 5px solid yellow;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#monnaie{
+    text-align: end;
+    background-color: transparent;
 }
+
+#result{
+    background-color: transparent;text-decoration-color: green;
+    text-align: end;
+}
+

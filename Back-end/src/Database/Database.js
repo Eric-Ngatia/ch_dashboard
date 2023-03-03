@@ -5,9 +5,9 @@ const database = 'ch_Users';
 
 class Database {
     constructor() {
-        this.__connect()
+        this._connect()
     }
-    __connect() {
+    _connect() {
         mongoose.connect(`mongodb://${server}/${database}`)
         .then(() => {
             console.log('Database connection successful✅✅')

@@ -15,12 +15,6 @@ h1{
     background-color: aqua;
 }
 
-.card__left{
-    width: 20%;
-    border: 2px solid green;
-    background-color: yellow;
-}
-
 .card__right{
     width: 80%;
     border: 2px solid blue;
@@ -63,19 +57,10 @@ p{
     float: right;
 }
 
-.fa-wallet{
-    margin-top: 6px;
-    float: left;
-    margin-right: 1.5rem;
-}
 
 h3{
     font-family: 'Aref Ruqaa Ink', serif;
     cursor: pointer;
     font-size: 1.7rem;
     height: 20px;
-}
-
-hr{
-    padding: 0 15px;
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import './Quete.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from 'react';
+import Navigation from './Navigation';
 
 
 
@@ -23,11 +24,11 @@ function Quete() {
 
     return (
         <div className='coins-box'>
-            <form action="" method="post">
-
+            <Navigation/>
+            <div action="" method="post">
                 <nav>
                     <div className='day'>
-                        <label htmlFor=""> Jour & Date : </label> <br/>
+                        <label htmlFor=""> Messe & Date : </label> <br/>
                         <select name="" id="select__jour">
                             <option value="1">Lundi</option>
                             <option value="2">Mardi</option>
@@ -35,21 +36,22 @@ function Quete() {
                             <option value="4">Jeudi</option>
                             <option value="5">Vendredi</option>
                             <option value="6">Samedi</option>
-                            <option value="7">Messe de Requiem</option>
-                            <option value="8"> Dimanche</option>
+                            <option value="7">Dimanche</option>
+                            <option value="8">Requiem</option>
                         </select>
                         <input type="date" name="" id="date" />  <br/>
 
                         <div>
-                            <label className='my-3' htmlFor="">Heure :</label>
+                            <label className='my-3' htmlFor="">Heure:</label>
                             <input type="time" name="" id="time" />
                         </div>
 
-                        <div className='my-5'>
+                        <div className='my-3'>
+                            <label htmlFor="" className= 'mx-1'>Type de Quête: </label>
                             <select name="typeDeQuete" id="type__de__quete">
-                                <option value="01">Quete Spe</option>
-                                <option value="02">Quete Ord</option>
-                                <option value="03">Quete Imp</option>
+                                <option value="01">Quête Ordinaire</option>
+                                <option value="02">Quête Spéciale</option>
+                                <option value="03">Quête Impérée</option>
                             </select>
                         </div>
 
@@ -63,7 +65,7 @@ function Quete() {
 
                 <div className='table'>
                     <table>
-                        <thead style={{textAlign:"center"}}>
+                        <thead >
                             <th>Nombre</th>
                             <th>Monnaie</th>
                             <th>Total obtenue</th>
@@ -71,9 +73,9 @@ function Quete() {
 
                         <tbody>
                             <tr>
-                                <td> <input type="number" min={0}  name="10000" id="chiffre" onChange={(e) => setResult1(e.target.value*10000)} /> </td>
+                                <td> <input type="number" min={0} defaultValue={0}  name="10000" id="chiffre" onChange={(e) => setResult1(e.target.value*10000)} /> </td>
                                 <td> <input type="" name="" id="monnaie" readonly value={10000} /> frcs</td>
-                                <td> <input type="number" name="" id="result" readOnly value={result1} /> </td>
+                                <td> <input type="number" name="" defaultValue={0} id="result" readOnly value={result1} /> </td>
                             </tr>
 
                             <tr>
@@ -90,44 +92,48 @@ function Quete() {
 
                             <tr>
                                 <td> <input type="number" min={0}  name="" id="chiffre" onChange={(e) => setResult4(e.target.value*1000)} /> </td>
-                                <td> <input type="number" name="" id="monnaie" readonly value={1000} /> frcs</td>
+                                <td> <input  name="" id="monnaie" readonly value={1000} /> frcs</td>
                                 <td> <input type="number" name="" id="result" readOnly value={result4} /> </td>
                             </tr>
 
                             <tr>
                                 <td> <input type="number" min={0}  name="" id="chiffre" onChange={(e) => setResult5(e.target.value*500)} /> </td>
-                                <td> <input type="number" name="" id="monnaie" readonly value={500} /> frcs</td>
+                                <td> <input  name="" id="monnaie" readonly value={500} /> frcs</td>
                                 <td> <input type="number" name="" id="result" readOnly value={result5} /> </td>
                             </tr>
 
                             <tr>
                                 <td> <input type="number" min={0}  name="" id="chiffre" onChange={(e) => setResult6(e.target.value*200)} /> </td>
-                                <td> <input type="number" name="" id="monnaie" readonly value={200} /> frcs</td>
+                                <td> <input  name="" id="monnaie" readonly value={200} /> frcs</td>
                                 <td> <input type="number" name="" id="result" readOnly value={result6} /> </td>
                             </tr>
 
                             <tr>
                                 <td> <input type="number" min={0}  name="" id="chiffre" onChange={(e) => setResult7(e.target.value*100)} /> </td>
-                                <td> <input type="number" name="" id="monnaie" readonly value={100} /> frcs</td>
+                                <td> <input  name="" id="monnaie" readonly value={100} /> frcs</td>
                                 <td> <input type="number" name="" id="result" readOnly value={result7} /> </td>
                             </tr>
 
                             <tr>
                                 <td> <input type="number" min={0}  name="" id="chiffre" onChange={(e) => setResult8(e.target.value*50)} /> </td>
-                                <td> <input type="number" name="" id="monnaie" readonly value={50} /> frcs</td>
+                                <td> <input  name="" id="monnaie" readonly value={50} /> frcs</td>
                                 <td> <input type="number" name="" id="result" readOnly value={result8} /> </td>
                             </tr>
 
                             <tr>
                                 <td> <input type="number" min={0}  name="" id="chiffre" onChange={(e) => setResult9(e.target.value*25)} /> </td>
-                                <td> <input type="number" name="" id="monnaie" readonly value={25} /> frcs</td>
+                                <td> <input  name="" id="monnaie" readonly value={25} /> frcs</td>
                                 <td> <input type="number" name="" id="result" readOnly value={result9} /> </td>
                             </tr>
 
                         </tbody>
                     </table>
                 </div>
-            </form>
+
+
+                {/* <------Submit Button------> */}
+                <button className='w-100 btn-primary mx-2' type="submit">Sauvegarder</button>
+            </div>
         </div>
     )
 }
