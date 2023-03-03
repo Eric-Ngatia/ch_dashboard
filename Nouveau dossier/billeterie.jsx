@@ -1,8 +1,8 @@
 // react js 
 
-import React, { useState } from "react";
-
-    function Table() {
+import React, { useState } from 'react';
+import './style.css';
+function Table() {
     const [values, setValues] = useState([
         { id: 1, nombre: 0, monnaie: 25, sousTotal: 0 },
         { id: 2, nombre: 0, monnaie: 50, sousTotal: 0 },
@@ -12,12 +12,13 @@ import React, { useState } from "react";
         { id: 6, nombre: 0, monnaie: 1000, sousTotal: 0 },
         { id: 7, nombre: 0, monnaie: 2000, sousTotal: 0 },
         { id: 8, nombre: 0, monnaie: 5000, sousTotal: 0 },
-        { id: 9, nombre: 0, monnaie: 10000, sousTotal: 0 }
+        { id: 9, nombre: 0, monnaie: 10000, sousTotal: 0 },
     ]);
+    
 
     const handleChange = (id, field, value) => {
         const newValues = [...values];
-        const index = newValues.findIndex(item => item.id === id);
+        const index = newValues.findIndex((item) => item.id === id);
         const item = newValues[index];
         const newValue = { ...item, [field]: value };
         newValue.sousTotal = newValue.nombre * newValue.monnaie;
@@ -38,13 +39,17 @@ import React, { useState } from "react";
             </tr>
             </thead>
             <tbody>
-            {values.map(item => (
+            {values.map((item) => (
                 <tr key={item.id}>
                 <td>
                     <input
                     type="number"
+                    min={0}
+                    default={0}
                     value={item.nombre}
-                    onChange={event => handleChange(item.id, "nombre", event.target.value)}
+                    onChange={(event) =>
+                        handleChange(item.id, 'nombre', event.target.value)
+                    }
                     />
                 </td>
                 <td>{item.monnaie}</td>
@@ -53,12 +58,15 @@ import React, { useState } from "react";
             ))}
             </tbody>
         </table>
-        <div>Total: <input type="text" readOnly value={total} /></div>
+        <div>
+            Total: <input class="total" type="text" readOnly value={total} />
+        </div>
         </div>
     );
-    }
+}
 
 export default Table;
+
 
                                         // STYLE CSS 
 // h1,
